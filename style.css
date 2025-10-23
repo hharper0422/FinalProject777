@@ -55,23 +55,69 @@ nav {
 }
 
 .nav__row {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between; /* pushes logo left, links far right */
+  align-items: center;
+  padding: 0 32px;
 }
 
+/* Logo */
 .nav__logo {
-    display: flex;
-    align-items: center;
-    margin: 8px 0;
-    padding-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
+.nav__logo--img {
+  max-width: 48px;
+  max-height: 48px;
+}
 
+.nav__logo--title {
+  font-weight: bold;
+  font-size: 28px;
+}
+
+/* Nav links */
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 44px; /* spacing between links */
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #243e63;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+  color: #6415ff;
+}
+
+.nav__link--button {
+  background-color: #6415ff;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 9999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav__link--button:hover {
+  background-color: #4b0fcc;
+  transform: translateY(-2px);
+}
+
+/* Hamburger menu (optional) */
 .btn__menu {
-    display: none;
-    background: transparent;
-    border: none;
-    transition: all 300ms ease;
+  display: none; /* show via media query on mobile */
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .btn__menu--svg:hover {
