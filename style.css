@@ -123,110 +123,112 @@ nav {
 }
 
 /* HEADER */
+
 header {
-  padding: 80px 0;
+  position: relative;
 }
 
 header .row {
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 60px;
 }
 
-.header--text__cont {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-  max-width: 600px;
+.header__description {
+  width: 40%;
+
 }
 
-h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  line-height: 1.2;
+.header--img__wrapper {
+  flex: 0 0 60%; /* 60% of row width */
+}
+
+.header--img {
+  width: 100%; /* make image fill its container */
+  height: auto;
 }
 
 .header--text__para {
-  font-size: 1.125rem;
-  font-weight: 500;
-  color: #4a5568;
-  line-height: 1.6;
-  max-width: 520px;
+  margin: 32px 0;
 }
 
-.email-inline-container {
+h1 {
+  font-size: 36px;
+  color: #1a202c;
+  line-height: 1.25;
+  max-width: 1280px;
+}
+
+.header__email {
+  width: 100%;
+  max-width: 448px;
+  height: 68px;
+  position: relative;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  border-radius: 50px;
-  overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  max-width: 480px;
+  margin-bottom: 92px;
 }
 
-.email-inline-input {
-  flex: 1;
+.header__email--btn {
+  z-index: 2;
+  margin: 8px;
+  height: calc(100% - 16px);
+  border-radius: 500px;
+  width: 160px;
   border: none;
-  padding: 14px 20px;
-  font-size: 16px;
-  outline: none;
-}
-
-.email-inline-input::placeholder {
-  color: #aaa;
-}
-
-.email-inline-button {
   background-color: #6415ff;
-  color: white;
-  border: none;
-  padding: 14px 28px;
+  color: #fff;
+  font-weight: 700;
   font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: all 300ms ease;
 }
 
-.email-inline-button:hover {
-  background-color: #4b0fcc;
-  transform: translateY(-2px);
+.header__email--btn:hover {
+  background-color: rgba(60, 13, 153);
 }
 
-.header--customer__reviews {
-  margin-top: 48px;
+.header__email--input {
+  width: 100%;
+  border-radius: 500px;
+  border: 2px solid rgb(229, 231, 235);
+  padding: 20px 192px 20px 32px;
+  color: rgb(36, 62, 99);
+  font-size: 16px;
+  font-weight: 500;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  transition: border-color 300ms;
+}
+
+.header__email--input::placeholder {
+  font-weight: 500;
+  color: rgb(158, 170, 189);
+}
+
+.header__email--input:hover {
+  border-color: rgba(160, 174, 192);
+}
+
+.header__email--input:focus,
+.header__email--input:active {
+  outline: none;
+  border-color: rgba(100, 21, 255);
 }
 
 .header--customer__text {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: #a0aec0;
-  letter-spacing: 1px;
-  margin-bottom: 16px;
+  font-size: 12px;
+  font-weight: 800;
+  color: grey
 }
 
-.header--customer__comp img {
-  max-width: 100%;
-  height: auto;
-  opacity: 0.8;
+.custo__image {
+  margin-top: 12px;
+  max-width: 428px;
 }
 
-/* HEADER IMAGE */
-.header--img__wrapper {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.header--img__cont {
-  max-width: 500px;
-}
-
-.header--img__cont img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
 
 /* FEATURES SECTION */
 
@@ -485,6 +487,7 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  width: 40%;
 }
 
 .values--intro__text {
@@ -1015,3 +1018,74 @@ footer {
   
 }
 
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+@media (max-width: 1024px) {
+  .header__description, .header--img__wrapper {
+    width: 100%;
+  }
+
+  .steps__desc--wrapper {
+    width: 100%;
+  }
+
+  .values--intro__heading,
+  .values--intro__para {
+    width: 100%;
+  }
+
+  .feature {
+    width: 48%;
+  }
+
+  .plans {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .row, .row__narrow, .quality .row, .steps .row, #values .row {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .feature {
+    width: 100%;
+  }
+
+  .header__email {
+    max-width: 100%;
+    margin-bottom: 32px;
+  }
+
+  .header__email--input {
+    padding-right: 140px; /* adjust button overlap on mobile */
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .features--intro__cont--heading,
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  .steps--intro__text,
+  .features--intro__cont--text {
+    font-size: 0.9rem;
+  }
+
+  .step__number {
+    font-size: 1.5rem;
+  }
+
+  .step__title {
+    font-size: 1.4rem;
+  }
+
+  .quality--title,
+  .values--intro__text {
+    font-size: 0.9rem;
+  }
+}
