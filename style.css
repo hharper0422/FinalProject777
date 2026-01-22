@@ -1018,74 +1018,345 @@ footer {
   
 }
 
-/* MEDIA QUERIES FOR RESPONSIVENESS */
-@media (max-width: 1024px) {
-  .header__description, .header--img__wrapper {
-    width: 100%;
-  }
-
-  .steps__desc--wrapper {
-    width: 100%;
-  }
-
-  .values--intro__heading,
-  .values--intro__para {
-    width: 100%;
-  }
-
-  .feature {
-    width: 48%;
-  }
-
-  .plans {
-    flex-direction: column;
-    gap: 16px;
-  }
-}
-
 @media (max-width: 768px) {
-  .row, .row__narrow, .quality .row, .steps .row, #values .row {
+
+  .nav__links {
+    gap: 24px;
+  }
+
+  .nav__link--primary {
+    margin-left: 24px;
+  }
+
+  header .row {
     flex-direction: column;
     gap: 32px;
   }
 
-  .feature {
+  .header__description {
     width: 100%;
+    text-align: center;
   }
 
-  .header__email {
-    max-width: 100%;
-    margin-bottom: 32px;
-  }
-
-  .header__email--input {
-    padding-right: 140px; /* adjust button overlap on mobile */
+  .header--img__wrapper {
+    flex: 1; 
+    width: 100%;
   }
 
   h1 {
     font-size: 28px;
   }
 
-  .features--intro__cont--heading,
+  .header__email {
+    margin: 0 auto 48px;
+  }
+
+  .feature {
+    width: 50%;
+  }
+
+  .features--intro__cont--heading {
+    font-size: 2.25rem;
+  }
+
+  .quality .row {
+    flex-direction : column;
+    gap: 40px;
+  }
+
+  .quality--para__wrapper {
+    text-align: center;
+  }
+
   h2 {
-    font-size: 2.2rem;
+    font-size: 2.25rem;
   }
 
-  .steps--intro__text,
-  .features--intro__cont--text {
-    font-size: 0.9rem;
+  .steps .row {
+    flex-direction: column-reverse;
+    gap: 40px;
   }
 
-  .step__number {
-    font-size: 1.5rem;
+  .steps__desc--wrapper {
+    width: 100%;
   }
-
-  .step__title {
-    font-size: 1.4rem;
+  
+  /* Values Section */
+  #values .row {
+    flex-direction: column;
+    gap: 40px;
   }
-
-  .quality--title,
-  .values--intro__text {
-    font-size: 0.9rem;
+  
+  .values--intro__cont {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .values--intro__heading,
+  .values--intro__para {
+    width: 100%;
+  }
+  
+  .values--img__wrapper {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .values--button {
+    margin: 32px auto 0;
+  }
+  
+  /* Pricing */
+  .pricing--intro__para {
+    width: 80%;
+  }
+  
+  .plans {
+    gap: 1.5rem;
+  }
+  
+  /* Testimonials */
+  .test .row {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .testimonials--img {
+    width: 100%;
+  }
+  
+  .testimonials--desc__wrapper {
+    width: 100%;
+  }
+  
+  /* Footer */
+  .footer__columns {
+    gap: 32px;
+  }
+  
+  .footer__column {
+    flex: 1 1 45%;
   }
 }
+
+/* ===== MOBILE (425px and below) ===== */
+@media (max-width: 425px) {
+  
+  /* General spacing adjustments */
+  .container {
+    padding: 64px 0;
+  }
+  
+  section {
+    padding: 0 16px;
+  }
+  
+  .row {
+    gap: 32px;
+  }
+  
+  /* Navigation - Stack or hide some links */
+  nav {
+    margin-top: 24px;
+  }
+  
+  .nav__links {
+    gap: 12px;
+  }
+  
+  .nav__link--primary,
+  .nav__link {
+    font-size: 12px;
+    margin-left: 0;
+  }
+  
+  .nav__link--button {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+  
+  .nav__logo--title {
+    font-size: 1.25rem;
+  }
+  
+  /* Header */
+  h1 {
+    font-size: 24px;
+  }
+  
+  .header--text__para {
+    font-size: 14px;
+    margin: 20px 0;
+  }
+  
+  .header__email {
+    max-width: 100%;
+    height: 56px;
+    margin-bottom: 48px;
+  }
+  
+  .header__email--btn {
+    width: 120px;
+    font-size: 14px;
+  }
+  
+  .header__email--input {
+    padding: 16px 130px 16px 20px;
+    font-size: 14px;
+  }
+  
+  /* Features */
+  .row__narrow {
+    padding: 0 16px;
+  }
+  
+  .features--intro__cont--text {
+    font-size: 0.875rem;
+  }
+  
+  .features--intro__cont--heading {
+    font-size: 1.75rem;
+  }
+  
+  .features--intro__cont--para {
+    font-size: 1rem;
+  }
+  
+  .feature {
+    width: 100%; /* Single column on mobile */
+  }
+  
+  .feature__row {
+    padding: 24px 12px;
+  }
+  
+  .feature__text--cont {
+    padding-left: 16px;
+  }
+  
+  /* Quality, Steps, Values, Testimonials - reduce heading sizes */
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  #quality,
+  #steps,
+  #test {
+    padding: 4rem 1rem;
+  }
+  
+  .quality--para,
+  .step__para,
+  .section--para {
+    font-size: 1rem;
+  }
+  
+  .step__number {
+    font-size: 1.5rem;
+    margin-right: 16px;
+  }
+  
+  .step__title {
+    font-size: 1.25rem;
+  }
+  
+  .step {
+    margin-bottom: 24px;
+  }
+  
+  /* Values */
+  .value {
+    min-width: 100%;
+  }
+  
+  .values--list {
+    gap: 24px;
+  }
+  
+  /* Pricing */
+  .pricing--intro__para {
+    width: 100%;
+    font-size: 1rem;
+  }
+  
+  .plans {
+    gap: 1rem;
+  }
+  
+  .plan {
+    max-width: 100%;
+  }
+  
+  .plan__price {
+    font-size: 1.75rem;
+  }
+  
+  .plan__name,
+  .plan__purpose {
+    font-size: 1rem;
+  }
+  
+  /* Testimonials */
+  .testimonal__text {
+    font-size: 1rem;
+  }
+  
+  .testimonial__para {
+    font-size: 14px;
+  }
+  
+  .testimonial--arrows {
+    margin-left: 0;
+    margin-top: 16px;
+  }
+  
+  /* Footer */
+  footer {
+    padding: 64px 16px;
+  }
+  
+  .footer__columns {
+    gap: 24px;
+  }
+  
+  .footer__column {
+    flex: 1 1 100%;
+  }
+  
+  .footer__bottom--row {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  
+  .footer__bottom--socials {
+    margin-left: 0;
+  }
+  
+  .footer__blob--1,
+  .footer__blob--2 {
+    display: none; /* Hide decorative blobs on mobile */
+  }
+}
+
+/* ===== EXTRA SMALL (375px and below) ===== */
+@media (max-width: 375px) {
+  h1 {
+    font-size: 20px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  .features--intro__cont--heading {
+    font-size: 1.5rem;
+  }
+  
+  .nav__logo--img,
+  .footer__logo--img {
+    width: 36px;
+    height: 36px;
+  }
+}
+
