@@ -28,6 +28,20 @@
                     <a href="#" class="nav__link--primary">Login</a>
                     <a href="#" class="nav__link--button">Sign Up</a>
                 </div>
+                <button class="nav__hamburger" aria-label="Open navigation">
+                    ☰
+                </button>
+                <script>
+                    (function () {
+                        const hamburger = document.querySelector('.nav__hamburger');
+                        const navLinks = document.querySelector('.nav__links');
+                        if (hamburger && navLinks) {
+                            hamburger.addEventListener('click', () => {
+                                navLinks.classList.toggle('nav__links--open');
+                            });
+                        }
+                    })();
+                </script>
             </div>
         </nav>
     <header>
