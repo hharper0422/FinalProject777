@@ -1026,8 +1026,6 @@ footer {
   
 }
 
-/* Add these media queries at the end of your existing style.css file */
-
 /* ========================================
    TABLET - 1024px and below
    ======================================== */
@@ -1056,10 +1054,10 @@ footer {
   }
 
   .feature {
-    width: 50%; /* 2 columns instead of 3 */
+    width: 50%;
   }
 
-  /* Quality, Steps, Values sections */
+  /* Section headings */
   h2 {
     font-size: 2.5rem;
   }
@@ -1084,7 +1082,7 @@ footer {
    SMALL TABLET - 768px and below
    ======================================== */
 @media (max-width: 768px) {
-  /* Navigation - Switch to hamburger menu */
+  /* Navigation */
   .nav__hamburger {
     display: block;
   }
@@ -1111,7 +1109,7 @@ footer {
     margin-left: 0;
   }
 
-  /* Header - Stack vertically */
+  /* Header */
   header .row {
     flex-direction: column;
     gap: 48px;
@@ -1135,7 +1133,6 @@ footer {
   }
 
   .header--customer__reviews {
-    display: flex;
     flex-direction: column;
     align-items: center;
   }
@@ -1146,10 +1143,10 @@ footer {
   }
 
   .feature {
-    width: 100%; /* Full width - 1 column */
+    width: 100%;
   }
 
-  /* Quality Section - Stack vertically */
+  /* Quality */
   .quality .row {
     flex-direction: column;
   }
@@ -1159,10 +1156,10 @@ footer {
   }
 
   .quality--img__wrapper {
-    order: -1; /* Image appears first */
+    order: -1;
   }
 
-  /* Steps Section - Stack vertically */
+  /* Steps */
   .steps .row {
     flex-direction: column;
   }
@@ -1171,7 +1168,7 @@ footer {
     width: 100%;
   }
 
-  /* Values Section - Stack vertically */
+  /* Values */
   #values .row {
     flex-direction: column;
   }
@@ -1216,7 +1213,7 @@ footer {
   }
 
   .footer__column {
-    flex: 1 1 calc(50% - 32px); /* 2 columns */
+    flex: 1 1 calc(50% - 32px);
   }
 
   .footer__bottom--row {
@@ -1229,7 +1226,7 @@ footer {
    MOBILE - 425px and below
    ======================================== */
 @media (max-width: 425px) {
-  /* General spacing adjustments */
+  /* General spacing */
   section {
     padding: 0 20px;
   }
@@ -1263,40 +1260,23 @@ footer {
   }
 
   .header__email {
-    max-width: 100%;
-    height: auto;
     flex-direction: column;
     gap: 12px;
     margin-bottom: 48px;
   }
 
-  .header__email--input {
+  .header__email--input,
+  .header__email--btn {
     width: 100%;
-    padding: 16px 20px;
-    position: static;
   }
 
   .header__email--btn {
-    width: 100%;
-    margin: 0;
     height: 48px;
   }
 
-  .custo__image {
-    max-width: 100%;
-  }
-
   /* Features */
-  .row__narrow {
-    padding: 0 20px;
-  }
-
   .features--intro__cont--heading {
     font-size: 1.75rem;
-  }
-
-  .features--intro__cont--para {
-    font-size: 1rem;
   }
 
   .feature__row {
@@ -1311,7 +1291,7 @@ footer {
     margin-top: 16px;
   }
 
-  /* Quality, Steps, Values sections */
+  /* Section headings */
   h2 {
     font-size: 1.75rem;
   }
@@ -1324,67 +1304,61 @@ footer {
   .quality--button,
   .values--button {
     width: 100%;
+  }
+
+  /* Quality Work */
+  #quality .row {
+    flex-direction: column;
     text-align: center;
+  }
+
+  .quality--img__wrapper {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .quality--img {
+    width: 100%;
+    height: auto;
+  }
+
+  .quality__desc--wrapper {
+    width: 100%;
   }
 
   /* Steps */
   #steps .row {
-    flex-direction: column-reverse !important;
+    flex-direction: column-reverse;
   }
 
   .steps--img__wrapper {
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
-    flex: none;
   }
 
-  .steps--img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-
-  .steps__desc--wrapper {
-    width: 100%;
-  }
-  
   .step {
     flex-direction: column;
     text-align: center;
-    margin-bottom: 24px;
   }
 
   .step__number {
-    margin-right: 0;
     margin-bottom: 12px;
-  }
-
-  .step__title {
-    font-size: 1.4rem;
   }
 
   /* Values */
   .values--list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 24px;
   }
 
   .value {
-    min-width: 100%;
-  }
-
-  /* Pricing */
-  .pricing--intro__heading {
-    font-size: 1.75rem;
-  }
-
-  .pricing--intro__para {
     width: 100%;
-    font-size: 1rem;
-  }
-
-  .plan {
-    max-width: 100%;
+    padding: 24px;
+    text-align: center;
   }
 
   /* Testimonials */
@@ -1392,47 +1366,19 @@ footer {
     width: 80%;
   }
 
-  .section--heading {
-    font-size: 1.75rem;
-  }
-
-  .testimonial--author__info {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .testimonial--arrows {
-    margin-left: 0;
-    width: 100%;
-    justify-content: center;
-    margin-top: 16px;
-  }
-
   /* Footer */
   footer {
     padding: 64px 20px;
   }
 
-  .footer__columns {
-    gap: 24px;
-  }
-
   .footer__column {
-    flex: 1 1 100%; /* Full width - 1 column */
+    flex: 1 1 100%;
     align-items: center;
     text-align: center;
   }
 
-  .footer__bottom--row {
-    gap: 16px;
-  }
-
   .footer__logo {
     flex-direction: column;
-  }
-
-  .footer__bottom--socials {
-    margin-left: 0;
   }
 }
 
@@ -1444,10 +1390,7 @@ footer {
     font-size: 22px;
   }
 
-  h2 {
-    font-size: 1.5rem;
-  }
-
+  h2,
   .features--intro__cont--heading,
   .pricing--intro__heading,
   .section--heading {
