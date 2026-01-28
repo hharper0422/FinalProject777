@@ -18,7 +18,7 @@ body {
 
 /* GENERAL LAYOUT */
 .container {
-  padding: 96px 0;
+  padding: 56px 0;
 }
 
 section {
@@ -409,11 +409,9 @@ h2 {
     margin: 0 auto;
 }
 
-.steps .row {
+#steps .row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 60px;
 }
 
 .steps--img__wrapper {
@@ -434,7 +432,6 @@ h2 {
     flex: 1;
     display: flex;
     flex-direction: column;
-    width: 50%;
     gap: 12px;
 }
 
@@ -1265,14 +1262,22 @@ footer {
     margin-bottom: 48px;
   }
 
-  .header__email--input,
-  .header__email--btn {
-    width: 100%;
-  }
+  .header__email {
+  position: static;
+}
 
-  .header__email--btn {
-    height: 48px;
-  }
+.header__email--btn {
+  position: static;   
+  width: 100%;
+}
+
+.header__email--input {
+  padding-right: 16px; /
+}
+
+.header__email--btn {
+  margin-top: 8px;
+}
 
   /* Features */
   .features--intro__cont--heading {
